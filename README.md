@@ -17,3 +17,30 @@ This step checks if the improvements from fine-tuning hold when the model is exp
 Training a Model from Scratch:
 Train a text-to-text model solely on the training data from scratch without leveraging a pre-trained model.
 Evaluate the performance of this model and compare the results with those of the fine-tuned pre-trained model to determine the benefits of using pre-trained models versus training from scratch.
+
+## Dataset used
+
+I used the Toxicity Comments Dataset - https://www.google.com/url?q=https%3A%2F%2Fwww.kaggle.com%2Fc%2Fjigsaw-toxic-comment-classification-challenge%2Fdata  
+
+# Baseline Model Testing
+
+* Why a sequence classifier could not be used? *
+
+Dataset constraints - Here I saw that there were multiple classes in this dataset beyond just "toxic". 
+Hence, it was a multi-label classification problem. That is, multiple nonexclusive labels (or none at all) may be assigned to each instance. Hence, I realized that while building our classifier, we will need to use a model capable of producing multiple labels for each input.
+
+Initially, I used the 'roberta-base' model but realized that this model is only used for sequence classification. Hence, this was only used to give me the predicted probablities for each toxicity label for any sample sentence.
+
+Questions --
+
+Is T5 , a seq to seq model?
+
+is robertabase a seq to classification model?
+
+what are the differences between the two?
+
+can seqtoclassification be converted to seqtoseq?
+
+
+
+
