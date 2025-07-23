@@ -31,15 +31,7 @@ Hence, it was a multi-label classification problem. That is, multiple nonexclusi
 
 Initially, I used the 'roberta-base' model but realized that this model is only used for sequence classification. Hence, this was only used to give me the predicted probablities for each toxicity label for any sample sentence.
 
-Questions --
 
-Is T5 , a seq to seq model?
-
-is robertabase a seq to classification model?
-
-what are the differences between the two?
-
-can seqtoclassification be converted to seqtoseq?
 
 
 
